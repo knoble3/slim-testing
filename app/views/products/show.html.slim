@@ -1,24 +1,25 @@
 p#notice = notice
 
-.max-w-sm.rounded.overflow-hidden.shadow-lg
-  img.w-full[src="https://images.unsplash.com/photo-1593001865061-075fad340aa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="meatballs"]
-  .px-6.py-4
-    h1.font-bold.text-xl.mb-2 
-      |  Name: 
-      = @product.name
-    h3.font-bold.text-lg.mb-2
-      |  Price: $
-      = @product.price
-    p.text-gray-700.text-base
-      |  Description: 
-      = @product.description
-  .px-6.py-4
-    span.inline-block.bg-gray-200.rounded-full.px-3.py-1.text-sm.font-semibold.text-gray-700.mr-2
-      | #tasty
-    span.inline-block.bg-gray-200.rounded-full.px-3.py-1.text-sm.font-semibold.text-gray-700.mr-2
-      | #not-vegan
-    span.inline-block.bg-gray-200.rounded-full.px-3.py-1.text-sm.font-semibold.text-gray-700
-      | #meaty
+.flex.flex-wrap
+  - 3.times do |i|
+    .max-w-sm.rounded.overflow-hidden.shadow-lg
+      img.w-full[src="https://images.unsplash.com/photo-1593001865061-075fad340aa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="meatballs"]
+      .px-6.py-4
+        h1.font-bold.text-xl.mb-2
+          |  Name: 
+          = @product.name
+        h3.font-bold.text-lg.mb-2
+          |  Price: $
+          = @product.price
+        p.text-gray-700.text-base
+          = @product.description
+      .px-6.py-4
+        span.inline-block.bg-gray-200.rounded-full.px-3.py-1.text-sm.font-semibold.text-gray-700.mr-2
+          | #tasty
+        span.inline-block.bg-gray-200.rounded-full.px-3.py-1.text-sm.font-semibold.text-gray-700.mr-2
+          | #not-vegan
+        span.inline-block.bg-gray-200.rounded-full.px-3.py-1.text-sm.font-semibold.text-gray-700
+          | #meaty
 
 
 => link_to 'Edit', edit_product_path(@product)
